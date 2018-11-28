@@ -1,0 +1,34 @@
+char input[100];
+char check[100];
+access=0;
+ 
+
+printf("Login as:\n");
+while(access==0)
+{
+  gets(input);
+  user=open("usernames.txt",O_RDONLY);
+  if( user<0)
+  {
+     perror ("error:can't acces usernames" )
+     exit(EXIT_FAILURE);
+  }
+  while(!feof(user))
+  {
+      if(fgets (mystring , 100 , user) != NULL )
+      {
+           if(strcmp(check,input) ==1)
+           printf("connected.\n");
+           access=1;
+           exit(EXIT_SUCCESS);
+      }
+   }
+perror("access denied..user doesn't exist \n ..please pick another username\n");
+}
+
+
+
+
+
+
+   
