@@ -22,6 +22,7 @@ int main()
 
    client_addr.sin_family = AF_INET;
    client_addr.sin_addr.s_addr =  INADDR_ANY; 
+   
    client_addr.sin_port = htons(port);
 
   
